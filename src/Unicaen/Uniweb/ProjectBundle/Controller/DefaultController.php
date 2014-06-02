@@ -8,6 +8,9 @@ class DefaultController extends Controller
 {
     public function indexAction($name)
     {
-        return $this->render('ProjectBundle:Default:index.html.twig', array('name' => $name));
+        $projet = new \Unicaen\Uniweb\ProjectBundle\Entity\Project();
+        var_dump($projet);
+
+        //return $this->render('ProjectBundle:Default:index.html.twig', array('name' => $name));
     }
 }
