@@ -1,6 +1,4 @@
 /web/bundles/
-/web/app_dev.php
-/web/config.php
 /app/bootstrap.php.cache
 /app/cache/*
 /app/config/parameters.yml
@@ -10,6 +8,4 @@
 /bin/
 /composer.phar
 composer.lock
-web/app_dev.php
-web/config.php
 
