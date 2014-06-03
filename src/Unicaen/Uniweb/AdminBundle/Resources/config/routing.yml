@@ -1,0 +1,17 @@
+project_update:
+    pattern:  /project/update/{id}
+    defaults: { _controller: ProjectBundle:Admin:update }
+    requirements: 
+        id: \d+
+
+project_delete:
+    pattern:  /project//delete/{id}
+    defaults: { _controller: ProjectBundle:Admin:delete }
+    requirements: 
+        id: \d+
+
+project_publish:
+    pattern:  /project/publish/{id}
+    defaults: { _controller: ProjectBundle:Admin:publish }
+    requirements: 
+        id: \d+

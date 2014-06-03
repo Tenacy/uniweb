@@ -11,21 +11,3 @@ project_view:
 project_list:
     pattern:  /list
     defaults: { _controller: ProjectBundle:Default:list }
-
-project_update:
-    pattern:  /update/{id}
-    defaults: { _controller: ProjectBundle:Default:update }
-    requirements: 
-        id: \d+
-
-project_delete:
-    pattern:  /delete/{id}
-    defaults: { _controller: ProjectBundle:Default:delete }
-    requirements: 
-        id: \d+
-
-project_publish:
-    pattern:  /publish/{id}
-    defaults: { _controller: ProjectBundle:Default:publish }
-    requirements: 
-        id: \d+

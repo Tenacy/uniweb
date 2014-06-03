@@ -22,6 +22,7 @@ class AppKernel extends Kernel
             new Unicaen\Uniweb\ProjectBundle\ProjectBundle(),
             new Unicaen\Uniweb\UserBundle\UniwebUserBundle(),
             new Unicaen\Uniweb\DesignBundle\UniwebDesignBundle(),
+            new Unicaen\Uniweb\AdminBundle\AdminBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
