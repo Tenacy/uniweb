@@ -3,11 +3,26 @@
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        {% block stylesheets %}
+             {% stylesheets output="main.css"
+                        "@UniwebDesignBundle/Resources/foundation/css/normalize.css"
+                        "@UniwebDesignBundle/Resources/foundation/css/foundation.min.css"
+                %}
+                    <link rel="stylesheet" href="{{ asset_url }}" />
+                {% endstylesheets %}
+        {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+
+        {% block javascripts %}
+            {% javascripts
+                    "@UniwebDesignBundle/Resources/foundation/js/vendor/modernizr.js"
+                    "@UniwebDesignBundle/Resources/foundation/js/foundation.min.js"
+            %}
+                <script src="{{ asset_url }}"></script>
+            {% endjavascripts %}
+        {% endblock %}
     </body>
 </html>

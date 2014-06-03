@@ -1,0 +1,7 @@
+parameters:
+#    uniweb_user.example.class: Unicaen\Uniweb\UserBundle\Example
+
+services:
+#    uniweb_user.example:
+#        class: %uniweb_user.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
