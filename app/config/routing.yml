@@ -1,3 +1,7 @@
+uniweb_user:
+    resource: "@UniwebUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
 project:
     resource: "@ProjectBundle/Resources/config/routing.yml"
     prefix:   /
