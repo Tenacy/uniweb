@@ -1,7 +1,7 @@
 <?php
 
 namespace Unicaen\Uniweb\ProjectBundle\Entity;
-
+use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -23,21 +23,22 @@ class Project
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank()
      * @ORM\Column(name="description", type="text")
      */
     private $description;
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank()
      * @ORM\Column(name="title", type="string", length=255)
      */
     private $title;
 
     /**
      * @var \DateTime
-     *
+     * @Assert\NotBlank()
+     * @Assert\DateTime()  
      * @ORM\Column(name="created", type="datetime")
      */
     private $created;
@@ -58,12 +59,16 @@ class Project
 
     /**
      * @var string
-     *
-     * @ORM\Column(name="budget", type="decimal")
+     * @Assert\Type(type="float")
+     * @ORM\Column(name="budget", type="decimal", scale=2)
      */
     private $budget;
 
-
+    public function __construct()
+    {
+        $this->created = new \Datetime();
+        $this->valid = false;
+    }
     /**
      * Get id
      *

@@ -1,7 +1,31 @@
-project_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: ProjectBundle:Default:index }
-
 project_create:
     pattern:  /create
     defaults: { _controller: ProjectBundle:Default:create }
+
+project_view:
+    pattern:  /view/{id}
+    defaults: { _controller: ProjectBundle:Default:view }
+    requirements: 
+        id: \d+
+
+project_list:
+    pattern:  /list
+    defaults: { _controller: ProjectBundle:Default:list }
+
+project_update:
+    pattern:  /update/{id}
+    defaults: { _controller: ProjectBundle:Default:update }
+    requirements: 
+        id: \d+
+
+project_delete:
+    pattern:  /delete/{id}
+    defaults: { _controller: ProjectBundle:Default:delete }
+    requirements: 
+        id: \d+
+
+project_publish:
+    pattern:  /publish/{id}
+    defaults: { _controller: ProjectBundle:Default:publish }
+    requirements: 
+        id: \d+
