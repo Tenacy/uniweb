@@ -1,0 +1,7 @@
+parameters:
+#    uniweb_design.example.class: Unicaen\Uniweb\DesignBundle\Example
+
+services:
+#    uniweb_design.example:
+#        class: %uniweb_design.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
