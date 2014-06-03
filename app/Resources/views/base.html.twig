@@ -18,11 +18,15 @@
 
         {% block javascripts %}
             {% javascripts
-                    "@UniwebDesignBundle/Resources/foundation/js/vendor/modernizr.js"
+                    "@UniwebDesignBundle/Resources/foundation/js/vendor/jquery.js"
                     "@UniwebDesignBundle/Resources/foundation/js/foundation.min.js"
+                    "@UniwebDesignBundle/Resources/foundation/js/vendor/modernizr.js"
             %}
                 <script src="{{ asset_url }}"></script>
             {% endjavascripts %}
+                <script>
+                       $(document).foundation();
+                </script>
         {% endblock %}
     </body>
 </html>
